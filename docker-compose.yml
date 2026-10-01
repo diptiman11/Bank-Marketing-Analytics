@@ -1,0 +1,21 @@
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_USER: portfolio
+      POSTGRES_PASSWORD: portfolio_dev
+      POSTGRES_DB: bank_marketing
+    ports:
+      - "5433:5432"
+    volumes:
+      - bank_marketing_pgdata:/var/lib/postgresql/data
+      - ./sql/schema.sql:/docker-entrypoint-initdb.d/01-schema.sql:ro
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U portfolio -d bank_marketing"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+volumes:
+  bank_marketing_pgdata:
+

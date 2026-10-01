@@ -1,0 +1,2 @@
+"""Bank marketing analytics project."""
+
