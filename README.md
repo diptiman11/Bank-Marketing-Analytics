@@ -170,14 +170,6 @@ controlled campaigns before operational use.
 - Real deployment would require consent, governance, fairness review, drift
   monitoring, and validation using current local data.
 
-## Resume-ready summary
-
-> Built an end-to-end bank marketing analytics project using 45,211 public
-> campaign records. Designed a PostgreSQL star schema and Python data pipeline,
-> analyzed customer and channel conversion, trained a leakage-controlled
-> subscription propensity model, and produced priority segments, Power BI-ready
-> tables, and an interactive dashboard to support campaign targeting.
-
 ## Attribution
 
 Moro, S., Rita, P., and Cortez, P. (2014). Bank Marketing. UCI Machine Learning
